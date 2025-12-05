@@ -3,11 +3,9 @@
 //
 #pragma once
 
-#implement
 
-
-#ifndef UNTITLED_ASSETS_H
-#define UNTITLED_ASSETS_H
+#ifndef UNTITLED_ASSET_H
+#define UNTITLED_ASSET_H
 
 
 class asset {
@@ -16,9 +14,8 @@ public:
         float position[3];
         float velocity[3];
         float bearing;
-        kind model;
     }
 };
 
 
-#endif //UNTITLED_ASSETS_H
+#endif //UNTITLED_ASSET_H

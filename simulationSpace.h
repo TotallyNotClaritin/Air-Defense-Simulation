@@ -20,15 +20,30 @@ class simulationSpace {
 public:
     simulationSpace()
     {
-    std::cout << "Constructing Simulation Space";
-        static std::string assetList = "assets.csv";
+    std::cout << "Constructing Simulation Space \n";
+
+        static std::string assetList = "../data/assets.csv";
         static std::ifstream inAss(assetList);
+
+        static std::string threatList = "../data/assets.csv";
+        static std::ifstream inThr(assetList);
+
+        //Load Data Files; assets.csv, and threats.csv they must be in ../data/ and be formatted as in README.txt
+        std::cout << "Loading Assets \n";
         if (!inAss.is_open()) {
-            std::cerr << "Error: Could not open file " << filename << std::endl;
+            std::cerr << "Error: Could not open " << assetList << std::endl;
             exit(EXIT_FAILURE);
         }
+        std::cout << "Successfully Loaded Assets \n";
 
-        auto count = std::count_if(std::istreambuf_iterator<char>{inAss}, {}, [](char c) { return c == '\n'; });
+        std::cout << "Loading Threats \n";
+        if (!inThr.is_open()) {
+            std::cerr << "Error: Could not open " << threatList << std::endl;
+            exit(EXIT_FAILURE);
+        }
+        std::cout << "Successfully Loaded Threats \n";
+
+        //auto lineCount = std::count_if(std::istreambuf_iterator<char>{inAss}, {}, [](char c) { return c == '\n'; });
 
 
 
@@ -38,8 +53,6 @@ public:
 
         };
     };
-    }
-}
 
 
 #endif //UNTITLED_SIMULATIONSPACE_H
