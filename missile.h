@@ -8,6 +8,12 @@
 
 
 class missile: public airborne{
+public:
+    missile()
+    {
+     asset::position
+    };
+
 };
 
 
