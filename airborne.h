@@ -4,19 +4,18 @@
 
 #ifndef UNTITLED_AIRBORNE_H
 #define UNTITLED_AIRBORNE_H
+#include "asset.h"
 
 
-class airborne {
+class airborne: public asset {
     public:
-    airborne() {
         int flightTime;
         int maxFlightTime;
         float mass;
-        float acceleration;
-        bool isLaunched;
-        bool isDestroyed;
-        bool isSmart;
-        bool isEvasive;
+
+    airborne(int flightTime, int maxFlightTime, float mass, bool isLaunched);
+    {
+
     }
 };
 

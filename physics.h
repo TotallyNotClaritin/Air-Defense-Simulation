@@ -7,6 +7,14 @@
 
 
 class physics {
+
+public:
+    int simulationTime = 0; //in terms of time steps (by default 1 second)
+    int timeStep = 1; //1 second
+
+
+    //IF NECESSARY, adaptive time stepping will be implemented.
+
 };
 
 

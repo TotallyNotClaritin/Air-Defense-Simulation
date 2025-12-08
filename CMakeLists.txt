@@ -16,4 +16,8 @@ add_executable(untitled main.cpp
         behavior.h
         airborne.cpp
         airborne.h
+        missile.cpp
+        missile.h
+        drone.cpp
+        drone.h
 )
